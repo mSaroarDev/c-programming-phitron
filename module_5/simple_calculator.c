@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main(){
+  long long int a, b;
+  scanf("%lld %lld", &a, &b);
+
+  long long int sum = a + b;
+  long long int mult = a * b;
+  long long int sub = a - b;
+
+  printf("%lld + %lld = %lld\n", a, b, sum);
+  printf("%lld * %lld = %lld\n", a, b, mult);
+  printf("%lld - %lld = %lld", a, b, sub);
+
+  return 0;
+}
