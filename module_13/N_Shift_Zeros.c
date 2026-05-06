@@ -1,4 +1,24 @@
 #include <stdio.h>
+
+void shiftZero(int arr[], int n)
+{
+  for (int i = 0; i < n; i++)
+  {
+    if (arr[i] != 0)
+    {
+      printf("%d ", arr[i]);
+    }
+  }
+
+  for (int i = 0; i < n; i++)
+  {
+    if (arr[i] == 0)
+    {
+      printf("%d ", arr[i]);
+    }
+  }
+}
+
 int main()
 {
   int n;
@@ -9,31 +29,9 @@ int main()
   for (int i = 0; i < n; i++)
   {
     scanf("%d", &arr[i]);
-  } 
-
-  int zeroIndex = arr[n-1];
-  int valIndex = 0;
-
-  for (int i = 0; i < n; i++)
-  {
-    if (arr[i] == 0)
-    {
-      zeroIndex = arr[i];
-      for (int j = i; j <= n-1; j++)
-      {
-        if(arr[j] != 0)
-        {
-          int tmp = arr[j];
-          arr[i] = arr[j];
-          arr[j] = 0;
-        }
-      }
-    }
   }
 
-  for (int i = 0; i < n; i++)
-  {
-    printf("%d ", arr[i]);
-  }
+  shiftZero(arr, n);
+
   return 0;
 }
