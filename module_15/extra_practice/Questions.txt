@@ -1,0 +1,7 @@
+Q: Difference between pass by value and pass by reference
+Ans: Pass by value is the passing a value to a function. If we use pass by value, only a copy
+of the value will pass to the targated function. And if we change this, it will not effect
+to the main value.
+
+Pass by reference is the passing the value actual reference to a function. And if we change the reference
+value, the main value will be changed.
